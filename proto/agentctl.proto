@@ -5,7 +5,8 @@ syntax = "proto3";
 
 
 package proto;
-option go_package = "github.com/headend/agent-control-service/tree/master/proto";
+//option go_package = "";
+option go_package = "github.com/headend/agent-control-service/proto";
 
 /**
  * Represents the params to identify agent.

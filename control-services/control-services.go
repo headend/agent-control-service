@@ -18,7 +18,7 @@ func StartServer()  {
 	}
 
 	rpcServer := grpc.NewServer()
-
+	print(agentctlpb.AgentCTLResponseStatus_FAIL)
 	if rpcServer == nil {
 		log.Fatalf("failed to register server: %v", err)
 	}
