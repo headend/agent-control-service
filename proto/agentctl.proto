@@ -1,0 +1,77 @@
+syntax = "proto3";
+/**
+ * Agent related messages.
+ */
+
+
+package proto;
+option go_package = "github.com/headend/agent-control-service/tree/master/proto";
+
+/**
+ * Represents the params to identify agent.
+ */
+message AgentCTLRequest {
+    /**
+    * IP of agent
+    */
+    string agent_ip = 1 [json_name = "agent_ip"];
+    int64 profile_ip = 2 [json_name = "profile_ip"];
+    int64 control_id = 3 [json_name = "control_id"];
+    int64 control_type = 4 [json_name = "control_type"];
+    repeated string tunnel_data = 5 [json_name = "tunnel_data"];
+}
+
+message AgentCTLResponse {
+    /**
+    * Status
+    */
+    bool AgentResponseStatus = 1 [json_name = "status"];
+    /**
+    * Slice of agent object
+    */
+    repeated AgentCTLRequest agentctls = 2 [json_name = "data"];
+}
+
+enum AgentCTLResponseStatus {
+    FAIL = 0; /// Success
+    SUCCESS = 1; /// Failed
+}
+
+service AgentCTLService {
+    /**
+    * Used to start an Agent
+    */
+    rpc STARTWorker (AgentCTLRequest) returns (AgentCTLResponse){
+    }
+
+    /**
+    * Used to stop an Agent
+    */
+    rpc STOPWorker (AgentCTLRequest) returns (AgentCTLResponse) {
+    }
+
+    /**
+    * Used to stop an Agent
+    */
+    rpc UPDATEWorker (AgentCTLRequest) returns (AgentCTLResponse) {
+    }
+
+    /**
+    * Used to restart an Agent
+    */
+    rpc REFESHMasterConnect (AgentCTLRequest) returns(AgentCTLResponse){
+    }
+
+    /**
+    * Used to enable connect to an Agent,allow agent connect to agent's backend
+    */
+    rpc ENABLEMasterConnect (AgentCTLRequest) returns(AgentCTLResponse){
+    }
+
+    /**
+    * Used to disable connect to an Agent, reject agent connect to agent's backend
+    */
+    rpc DISABLEMasterConnect (AgentCTLRequest) returns(AgentCTLResponse){
+    }
+}
+
