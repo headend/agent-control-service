@@ -8,17 +8,23 @@ import (
 	"net"
 )
 
+type agentCtlServer struct {
+	Config *configuration.Conf
+}
+
+
 func StartServer()  {
 	var config configuration.Conf
 
 	config.LoadConf()
+
 	ln, err := net.Listen("tcp", "0.0.0.0:5000")
 	if err != nil {
 		log.Fatalf("failed to listen: %v", err)
 	}
 
 	rpcServer := grpc.NewServer()
-	print(agentctlpb.AgentCTLResponseStatus_FAIL)
+	agentctlpb.RegisterAgentCTLServiceServer(rpcServer, &agentCtlServer{Config:&config})
 	if rpcServer == nil {
 		log.Fatalf("failed to register server: %v", err)
 	}

@@ -1,5 +1,5 @@
 build:
-		protoc --proto_path=proto --go_out=proto --go_opt=paths=source_relative proto/agentctl.proto
+		protoc -I proto/ proto/agentctl.proto --go_out=plugins=grpc:proto/
 		GOOS=linux GOARCH=amd64 go build -o deployment/agent-crontrol-service main.go
 		docker build -t agent-services-server deployments
 run:
