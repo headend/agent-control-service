@@ -1,6 +1,7 @@
 package control_services
 
 import (
+	"fmt"
 	"github.com/headend/share-module/configuration"
 	agentctlpb "github.com/headend/agent-control-service/proto"
 	"google.golang.org/grpc"
@@ -17,8 +18,8 @@ func StartServer()  {
 	var config configuration.Conf
 
 	config.LoadConf()
-
-	ln, err := net.Listen("tcp", "0.0.0.0:5000")
+	listenAddr:= fmt.Sprintf("%s:%d", config.RPC.Agentctl.Host, config.RPC.Agentctl.Port)
+	ln, err := net.Listen("tcp", listenAddr)
 	if err != nil {
 		log.Fatalf("failed to listen: %v", err)
 	}
@@ -31,6 +32,5 @@ func StartServer()  {
 	if err := rpcServer.Serve(ln); err != nil {
 		log.Fatalf("failed to serve: %v", err)
 	}
-
 
 }
