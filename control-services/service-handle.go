@@ -3,9 +3,9 @@ package control_services
 import (
 	"context"
 	agentctlpb "github.com/headend/agent-control-service/proto"
-	"github.com/headend/share-module/model"
+	msgQueueServer "github.com/headend/share-module/MQ"
 	"github.com/headend/share-module/configuration/static-config"
-	"github.com/headend/share-module/file-and-directory"
+	"github.com/headend/share-module/model"
 	"time"
 )
 
@@ -18,7 +18,7 @@ func (c *agentCtlServer) STARTWorker(ctx context.Context, in *agentctlpb.AgentCT
 	// Check agent exists
 	// Assign signal number
 	// Send signal
-	ctlResponseData, err2 := SendControlSignal(in, static_config.StartWorker)
+	ctlResponseData, err2 := SendControlSignal(c, in, static_config.StartWorker)
 	if err2 != nil {
 		return nil, err2
 	}
@@ -27,7 +27,7 @@ func (c *agentCtlServer) STARTWorker(ctx context.Context, in *agentctlpb.AgentCT
 
 
 func (c *agentCtlServer) STOPWorker(ctx context.Context, in *agentctlpb.AgentCTLRequest) (*agentctlpb.AgentCTLResponse, error) {
-	ctlResponseData, err2 := SendControlSignal(in, static_config.StopWorker)
+	ctlResponseData, err2 := SendControlSignal(c, in, static_config.StopWorker)
 	if err2 != nil {
 		return nil, err2
 	}
@@ -35,7 +35,7 @@ func (c *agentCtlServer) STOPWorker(ctx context.Context, in *agentctlpb.AgentCTL
 }
 
 func (c *agentCtlServer) UPDATEWorker(ctx context.Context, in *agentctlpb.AgentCTLRequest) (*agentctlpb.AgentCTLResponse, error) {
-	ctlResponseData, err2 := SendControlSignal(in, static_config.UpdateWorker)
+	ctlResponseData, err2 := SendControlSignal(c, in, static_config.UpdateWorker)
 	if err2 != nil {
 		return nil, err2
 	}
@@ -43,7 +43,7 @@ func (c *agentCtlServer) UPDATEWorker(ctx context.Context, in *agentctlpb.AgentC
 }
 
 func (c *agentCtlServer) REFESHMasterConnect(ctx context.Context, in *agentctlpb.AgentCTLRequest) (*agentctlpb.AgentCTLResponse, error) {
-	ctlResponseData, err2 := SendControlSignal(in, static_config.UpdateWorker)
+	ctlResponseData, err2 := SendControlSignal(c, in, static_config.UpdateWorker)
 	if err2 != nil {
 		return nil, err2
 	}
@@ -51,7 +51,7 @@ func (c *agentCtlServer) REFESHMasterConnect(ctx context.Context, in *agentctlpb
 }
 
 func (c *agentCtlServer) ENABLEMasterConnect(ctx context.Context, in *agentctlpb.AgentCTLRequest) (*agentctlpb.AgentCTLResponse, error) {
-	ctlResponseData, err2 := SendControlSignal(in, static_config.ConnectAgentd)
+	ctlResponseData, err2 := SendControlSignal(c, in, static_config.ConnectAgentd)
 	if err2 != nil {
 		return nil, err2
 	}
@@ -59,15 +59,15 @@ func (c *agentCtlServer) ENABLEMasterConnect(ctx context.Context, in *agentctlpb
 }
 
 func (c *agentCtlServer) DISABLEMasterConnect(ctx context.Context, in *agentctlpb.AgentCTLRequest) (*agentctlpb.AgentCTLResponse, error) {
-	ctlResponseData, err2 := SendControlSignal(in, static_config.DisconnectAgentd)
+	ctlResponseData, err2 := SendControlSignal(c, in, static_config.DisconnectAgentd)
 	if err2 != nil {
 		return nil, err2
 	}
 	return &ctlResponseData, nil
 }
 
-func SendControlSignal(in *agentctlpb.AgentCTLRequest, controlId int) (agentctlpb.AgentCTLResponse, error) {
-	err2 := SendMsgToQueue(in, controlId)
+func SendControlSignal(c *agentCtlServer, in *agentctlpb.AgentCTLRequest, controlId int) (agentctlpb.AgentCTLResponse, error) {
+	err2 := SendMsgToQueue(c, in, controlId)
 	if err2 != nil {
 		return agentctlpb.AgentCTLResponse{}, err2
 	}
@@ -81,10 +81,10 @@ func SendControlSignal(in *agentctlpb.AgentCTLRequest, controlId int) (agentctlp
 	return ctlResponseData, nil
 }
 
-func SendMsgToQueue(in *agentctlpb.AgentCTLRequest, controlId int) (err error) {
+func SendMsgToQueue(c *agentCtlServer, in *agentctlpb.AgentCTLRequest, controlId int) (err error) {
 	messageData := model.AgentCTLQueueRequest{
 		AgentCtlRequest: model.AgentCtlRequest{
-			AgentIp:   in.AgentIp,
+			AgentId: in.AgentId,
 			ControlId: int(in.ControlId),
 		},
 		ControlType: controlId,
@@ -95,7 +95,11 @@ func SendMsgToQueue(in *agentctlpb.AgentCTLRequest, controlId int) (err error) {
 		return err
 	}
 	// Do send to message queue
-	logFile := file_and_directory.MyFile{Path: static_config.LogPath + "/ctlmsg.log"}
-	logFile.WriteString(msgSendToQueue)
+	var queueServer msgQueueServer.MQ
+	defer queueServer.CloseProducer()
+	queueServer.PushMsgByTopic(c.Config, msgSendToQueue, c.Config.MQ.OperationTopic)
+	if queueServer.Err != nil {
+		return queueServer.Err
+	}
 	return nil
 }
