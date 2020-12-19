@@ -69,13 +69,13 @@ func (c *agentCtlServer) DISABLEMasterConnect(ctx context.Context, in *agentctlp
 func SendControlSignal(c *agentCtlServer, in *agentctlpb.AgentCTLRequest, controlId int) (agentctlpb.AgentCTLResponse, error) {
 	err2 := SendMsgToQueue(c, in, controlId)
 	if err2 != nil {
-		return agentctlpb.AgentCTLResponse{}, err2
+		return agentctlpb.AgentCTLResponse{Status: agentctlpb.AgentCTLResponseStatus_FAIL}, err2
 	}
 	// make response data
 	var AgentctlResponse []*agentctlpb.AgentCTLRequest
 	AgentctlResponse = append(AgentctlResponse, in)
 	ctlResponseData := agentctlpb.AgentCTLResponse{
-		AgentResponseStatus: true,
+		Status: agentctlpb.AgentCTLResponseStatus_SUCCESS,
 		Agentctls:           AgentctlResponse,
 	}
 	return ctlResponseData, nil
