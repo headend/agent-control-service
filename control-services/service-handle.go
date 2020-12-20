@@ -96,7 +96,7 @@ func SendMsgToQueue(c *agentCtlServer, in *agentctlpb.AgentCTLRequest, controlId
 	}
 	// Do send to message queue
 	var queueServer msgQueueServer.MQ
-	defer queueServer.CloseProducer()
+	//defer queueServer.CloseProducer()
 	queueServer.PushMsgByTopic(c.Config, msgSendToQueue, c.Config.MQ.OperationTopic)
 	if queueServer.Err != nil {
 		return queueServer.Err
