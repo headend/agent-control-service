@@ -19,7 +19,8 @@ message AgentCTLRequest {
     int64 profile_ip = 2 [json_name = "profile_ip"];
     int64 control_id = 3 [json_name = "control_id"];
     int64 control_type = 4 [json_name = "control_type"];
-    repeated google.protobuf.Any tunnel_data = 5 [json_name = "tunnel_data"];
+    int64 run_thread = 5 [json_name = "run_thread"];
+    repeated google.protobuf.Any tunnel_data = 6 [json_name = "tunnel_data"];
 }
 
 message AgentCTLResponse {
@@ -73,6 +74,35 @@ service AgentCTLService {
     * Used to disable connect to an Agent, reject agent connect to agent's backend
     */
     rpc DISABLEMasterConnect (AgentCTLRequest) returns(AgentCTLResponse){
+    }
+
+    /**
+    * Used to enable connect to an Agent,allow agent connect to agent's backend
+    */
+    rpc UpdateMonitorStatus (AgentCTLRequest) returns(AgentCTLResponse){
+    }
+
+    /**
+    * update monitor signal
+    */
+    rpc UpdateMonitorSignal (AgentCTLRequest) returns(AgentCTLResponse){
+    }
+
+    /**
+    * Update monitor video
+    */
+    rpc UpdateMonitorVideo (AgentCTLRequest) returns(AgentCTLResponse){
+    }
+
+    /**
+    * Update monitor audio
+    */
+    rpc UpdateMonitorAudio (AgentCTLRequest) returns(AgentCTLResponse){
+    }
+    /**
+    * Update run thread
+    */
+    rpc UpdateMonitorRunthread (AgentCTLRequest) returns(AgentCTLResponse){
     }
 }
 
