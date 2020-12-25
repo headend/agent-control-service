@@ -41,68 +41,68 @@ enum AgentCTLResponseStatus {
 
 service AgentCTLService {
     /**
-    * Used to start an Agent
+    * Used to control an Agent
     */
-    rpc STARTWorker (AgentCTLRequest) returns (AgentCTLResponse){
+    rpc ControlAgent (AgentCTLRequest) returns (AgentCTLResponse){
     }
 
-    /**
-    * Used to stop an Agent
-    */
-    rpc STOPWorker (AgentCTLRequest) returns (AgentCTLResponse) {
-    }
+    ///**
+    //* Used to stop an Agent
+    //*/
+    //rpc STOPWorker (AgentCTLRequest) returns (AgentCTLResponse) {
+    //}
 
-    /**
-    * Used to stop an Agent
-    */
-    rpc UPDATEWorker (AgentCTLRequest) returns (AgentCTLResponse) {
-    }
+    ///**
+    //* Used to stop an Agent
+    //*/
+    //rpc UPDATEWorker (AgentCTLRequest) returns (AgentCTLResponse) {
+    //}
 
-    /**
-    * Used to restart an Agent
-    */
-    rpc REFESHMasterConnect (AgentCTLRequest) returns(AgentCTLResponse){
-    }
+    ///**
+    //* Used to restart an Agent
+    //*/
+    //rpc REFESHMasterConnect (AgentCTLRequest) returns(AgentCTLResponse){
+    //}
 
-    /**
-    * Used to enable connect to an Agent,allow agent connect to agent's backend
-    */
-    rpc ENABLEMasterConnect (AgentCTLRequest) returns(AgentCTLResponse){
-    }
+    ///**
+    //* Used to enable connect to an Agent,allow agent connect to agent's backend
+    //*/
+    //rpc ENABLEMasterConnect (AgentCTLRequest) returns(AgentCTLResponse){
+    //}
 
-    /**
-    * Used to disable connect to an Agent, reject agent connect to agent's backend
-    */
-    rpc DISABLEMasterConnect (AgentCTLRequest) returns(AgentCTLResponse){
-    }
+    ///**
+    //* Used to disable connect to an Agent, reject agent connect to agent's backend
+    //*/
+    //rpc DISABLEMasterConnect (AgentCTLRequest) returns(AgentCTLResponse){
+    //}
 
-    /**
-    * Used to enable connect to an Agent,allow agent connect to agent's backend
-    */
-    rpc UpdateMonitorStatus (AgentCTLRequest) returns(AgentCTLResponse){
-    }
+    ///**
+    //* Used to enable connect to an Agent,allow agent connect to agent's backend
+    //*/
+    //rpc UpdateMonitorStatus (AgentCTLRequest) returns(AgentCTLResponse){
+    //}
 
-    /**
-    * update monitor signal
-    */
-    rpc UpdateMonitorSignal (AgentCTLRequest) returns(AgentCTLResponse){
-    }
+    ///**
+    //* update monitor signal
+    //*/
+    //rpc UpdateMonitorSignal (AgentCTLRequest) returns(AgentCTLResponse){
+    //}
 
-    /**
-    * Update monitor video
-    */
-    rpc UpdateMonitorVideo (AgentCTLRequest) returns(AgentCTLResponse){
-    }
+    ///**
+    //* Update monitor video
+    //*/
+    //rpc UpdateMonitorVideo (AgentCTLRequest) returns(AgentCTLResponse){
+    //}
 
-    /**
-    * Update monitor audio
-    */
-    rpc UpdateMonitorAudio (AgentCTLRequest) returns(AgentCTLResponse){
-    }
-    /**
-    * Update run thread
-    */
-    rpc UpdateMonitorRunthread (AgentCTLRequest) returns(AgentCTLResponse){
-    }
+    ///**
+    //* Update monitor audio
+    //*/
+    //rpc UpdateMonitorAudio (AgentCTLRequest) returns(AgentCTLResponse){
+    //}
+    ///**
+    //* Update run thread
+    //*/
+    //rpc UpdateMonitorRunthread (AgentCTLRequest) returns(AgentCTLResponse){
+    //}
 }
 

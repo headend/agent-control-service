@@ -257,62 +257,16 @@ var file_agentctl_proto_rawDesc = []byte{
 	0x75, 0x65, 0x73, 0x74, 0x52, 0x04, 0x64, 0x61, 0x74, 0x61, 0x2a, 0x2f, 0x0a, 0x16, 0x41, 0x67,
 	0x65, 0x6e, 0x74, 0x43, 0x54, 0x4c, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x53, 0x74,
 	0x61, 0x74, 0x75, 0x73, 0x12, 0x08, 0x0a, 0x04, 0x46, 0x41, 0x49, 0x4c, 0x10, 0x00, 0x12, 0x0b,
-	0x0a, 0x07, 0x53, 0x55, 0x43, 0x43, 0x45, 0x53, 0x53, 0x10, 0x01, 0x32, 0xa9, 0x06, 0x0a, 0x0f,
-	0x41, 0x67, 0x65, 0x6e, 0x74, 0x43, 0x54, 0x4c, 0x53, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x12,
-	0x40, 0x0a, 0x0b, 0x53, 0x54, 0x41, 0x52, 0x54, 0x57, 0x6f, 0x72, 0x6b, 0x65, 0x72, 0x12, 0x16,
+	0x0a, 0x07, 0x53, 0x55, 0x43, 0x43, 0x45, 0x53, 0x53, 0x10, 0x01, 0x32, 0x54, 0x0a, 0x0f, 0x41,
+	0x67, 0x65, 0x6e, 0x74, 0x43, 0x54, 0x4c, 0x53, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x12, 0x41,
+	0x0a, 0x0c, 0x43, 0x6f, 0x6e, 0x74, 0x72, 0x6f, 0x6c, 0x41, 0x67, 0x65, 0x6e, 0x74, 0x12, 0x16,
 	0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2e, 0x41, 0x67, 0x65, 0x6e, 0x74, 0x43, 0x54, 0x4c, 0x52,
 	0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x17, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2e, 0x41,
 	0x67, 0x65, 0x6e, 0x74, 0x43, 0x54, 0x4c, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22,
-	0x00, 0x12, 0x3f, 0x0a, 0x0a, 0x53, 0x54, 0x4f, 0x50, 0x57, 0x6f, 0x72, 0x6b, 0x65, 0x72, 0x12,
-	0x16, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2e, 0x41, 0x67, 0x65, 0x6e, 0x74, 0x43, 0x54, 0x4c,
-	0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x17, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2e,
-	0x41, 0x67, 0x65, 0x6e, 0x74, 0x43, 0x54, 0x4c, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65,
-	0x22, 0x00, 0x12, 0x41, 0x0a, 0x0c, 0x55, 0x50, 0x44, 0x41, 0x54, 0x45, 0x57, 0x6f, 0x72, 0x6b,
-	0x65, 0x72, 0x12, 0x16, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2e, 0x41, 0x67, 0x65, 0x6e, 0x74,
-	0x43, 0x54, 0x4c, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x17, 0x2e, 0x70, 0x72, 0x6f,
-	0x74, 0x6f, 0x2e, 0x41, 0x67, 0x65, 0x6e, 0x74, 0x43, 0x54, 0x4c, 0x52, 0x65, 0x73, 0x70, 0x6f,
-	0x6e, 0x73, 0x65, 0x22, 0x00, 0x12, 0x48, 0x0a, 0x13, 0x52, 0x45, 0x46, 0x45, 0x53, 0x48, 0x4d,
-	0x61, 0x73, 0x74, 0x65, 0x72, 0x43, 0x6f, 0x6e, 0x6e, 0x65, 0x63, 0x74, 0x12, 0x16, 0x2e, 0x70,
-	0x72, 0x6f, 0x74, 0x6f, 0x2e, 0x41, 0x67, 0x65, 0x6e, 0x74, 0x43, 0x54, 0x4c, 0x52, 0x65, 0x71,
-	0x75, 0x65, 0x73, 0x74, 0x1a, 0x17, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2e, 0x41, 0x67, 0x65,
-	0x6e, 0x74, 0x43, 0x54, 0x4c, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x00, 0x12,
-	0x48, 0x0a, 0x13, 0x45, 0x4e, 0x41, 0x42, 0x4c, 0x45, 0x4d, 0x61, 0x73, 0x74, 0x65, 0x72, 0x43,
-	0x6f, 0x6e, 0x6e, 0x65, 0x63, 0x74, 0x12, 0x16, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2e, 0x41,
-	0x67, 0x65, 0x6e, 0x74, 0x43, 0x54, 0x4c, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x17,
-	0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2e, 0x41, 0x67, 0x65, 0x6e, 0x74, 0x43, 0x54, 0x4c, 0x52,
-	0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x00, 0x12, 0x49, 0x0a, 0x14, 0x44, 0x49, 0x53,
-	0x41, 0x42, 0x4c, 0x45, 0x4d, 0x61, 0x73, 0x74, 0x65, 0x72, 0x43, 0x6f, 0x6e, 0x6e, 0x65, 0x63,
-	0x74, 0x12, 0x16, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2e, 0x41, 0x67, 0x65, 0x6e, 0x74, 0x43,
-	0x54, 0x4c, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x17, 0x2e, 0x70, 0x72, 0x6f, 0x74,
-	0x6f, 0x2e, 0x41, 0x67, 0x65, 0x6e, 0x74, 0x43, 0x54, 0x4c, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e,
-	0x73, 0x65, 0x22, 0x00, 0x12, 0x48, 0x0a, 0x13, 0x55, 0x70, 0x64, 0x61, 0x74, 0x65, 0x4d, 0x6f,
-	0x6e, 0x69, 0x74, 0x6f, 0x72, 0x53, 0x74, 0x61, 0x74, 0x75, 0x73, 0x12, 0x16, 0x2e, 0x70, 0x72,
-	0x6f, 0x74, 0x6f, 0x2e, 0x41, 0x67, 0x65, 0x6e, 0x74, 0x43, 0x54, 0x4c, 0x52, 0x65, 0x71, 0x75,
-	0x65, 0x73, 0x74, 0x1a, 0x17, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2e, 0x41, 0x67, 0x65, 0x6e,
-	0x74, 0x43, 0x54, 0x4c, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x00, 0x12, 0x48,
-	0x0a, 0x13, 0x55, 0x70, 0x64, 0x61, 0x74, 0x65, 0x4d, 0x6f, 0x6e, 0x69, 0x74, 0x6f, 0x72, 0x53,
-	0x69, 0x67, 0x6e, 0x61, 0x6c, 0x12, 0x16, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2e, 0x41, 0x67,
-	0x65, 0x6e, 0x74, 0x43, 0x54, 0x4c, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x17, 0x2e,
-	0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2e, 0x41, 0x67, 0x65, 0x6e, 0x74, 0x43, 0x54, 0x4c, 0x52, 0x65,
-	0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x00, 0x12, 0x47, 0x0a, 0x12, 0x55, 0x70, 0x64, 0x61,
-	0x74, 0x65, 0x4d, 0x6f, 0x6e, 0x69, 0x74, 0x6f, 0x72, 0x56, 0x69, 0x64, 0x65, 0x6f, 0x12, 0x16,
-	0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2e, 0x41, 0x67, 0x65, 0x6e, 0x74, 0x43, 0x54, 0x4c, 0x52,
-	0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x17, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2e, 0x41,
-	0x67, 0x65, 0x6e, 0x74, 0x43, 0x54, 0x4c, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22,
-	0x00, 0x12, 0x47, 0x0a, 0x12, 0x55, 0x70, 0x64, 0x61, 0x74, 0x65, 0x4d, 0x6f, 0x6e, 0x69, 0x74,
-	0x6f, 0x72, 0x41, 0x75, 0x64, 0x69, 0x6f, 0x12, 0x16, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2e,
-	0x41, 0x67, 0x65, 0x6e, 0x74, 0x43, 0x54, 0x4c, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a,
-	0x17, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2e, 0x41, 0x67, 0x65, 0x6e, 0x74, 0x43, 0x54, 0x4c,
-	0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x00, 0x12, 0x4b, 0x0a, 0x16, 0x55, 0x70,
-	0x64, 0x61, 0x74, 0x65, 0x4d, 0x6f, 0x6e, 0x69, 0x74, 0x6f, 0x72, 0x52, 0x75, 0x6e, 0x74, 0x68,
-	0x72, 0x65, 0x61, 0x64, 0x12, 0x16, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2e, 0x41, 0x67, 0x65,
-	0x6e, 0x74, 0x43, 0x54, 0x4c, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x17, 0x2e, 0x70,
-	0x72, 0x6f, 0x74, 0x6f, 0x2e, 0x41, 0x67, 0x65, 0x6e, 0x74, 0x43, 0x54, 0x4c, 0x52, 0x65, 0x73,
-	0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x00, 0x42, 0x30, 0x5a, 0x2e, 0x67, 0x69, 0x74, 0x68, 0x75,
-	0x62, 0x2e, 0x63, 0x6f, 0x6d, 0x2f, 0x68, 0x65, 0x61, 0x64, 0x65, 0x6e, 0x64, 0x2f, 0x61, 0x67,
-	0x65, 0x6e, 0x74, 0x2d, 0x63, 0x6f, 0x6e, 0x74, 0x72, 0x6f, 0x6c, 0x2d, 0x73, 0x65, 0x72, 0x76,
-	0x69, 0x63, 0x65, 0x2f, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f,
-	0x33,
+	0x00, 0x42, 0x30, 0x5a, 0x2e, 0x67, 0x69, 0x74, 0x68, 0x75, 0x62, 0x2e, 0x63, 0x6f, 0x6d, 0x2f,
+	0x68, 0x65, 0x61, 0x64, 0x65, 0x6e, 0x64, 0x2f, 0x61, 0x67, 0x65, 0x6e, 0x74, 0x2d, 0x63, 0x6f,
+	0x6e, 0x74, 0x72, 0x6f, 0x6c, 0x2d, 0x73, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x2f, 0x70, 0x72,
+	0x6f, 0x74, 0x6f, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
 }
 
 var (
@@ -336,36 +290,16 @@ var file_agentctl_proto_goTypes = []interface{}{
 	(*anypb.Any)(nil),           // 3: google.protobuf.Any
 }
 var file_agentctl_proto_depIdxs = []int32{
-	3,  // 0: proto.AgentCTLRequest.tunnel_data:type_name -> google.protobuf.Any
-	0,  // 1: proto.AgentCTLResponse.status:type_name -> proto.AgentCTLResponseStatus
-	1,  // 2: proto.AgentCTLResponse.agentctls:type_name -> proto.AgentCTLRequest
-	1,  // 3: proto.AgentCTLService.STARTWorker:input_type -> proto.AgentCTLRequest
-	1,  // 4: proto.AgentCTLService.STOPWorker:input_type -> proto.AgentCTLRequest
-	1,  // 5: proto.AgentCTLService.UPDATEWorker:input_type -> proto.AgentCTLRequest
-	1,  // 6: proto.AgentCTLService.REFESHMasterConnect:input_type -> proto.AgentCTLRequest
-	1,  // 7: proto.AgentCTLService.ENABLEMasterConnect:input_type -> proto.AgentCTLRequest
-	1,  // 8: proto.AgentCTLService.DISABLEMasterConnect:input_type -> proto.AgentCTLRequest
-	1,  // 9: proto.AgentCTLService.UpdateMonitorStatus:input_type -> proto.AgentCTLRequest
-	1,  // 10: proto.AgentCTLService.UpdateMonitorSignal:input_type -> proto.AgentCTLRequest
-	1,  // 11: proto.AgentCTLService.UpdateMonitorVideo:input_type -> proto.AgentCTLRequest
-	1,  // 12: proto.AgentCTLService.UpdateMonitorAudio:input_type -> proto.AgentCTLRequest
-	1,  // 13: proto.AgentCTLService.UpdateMonitorRunthread:input_type -> proto.AgentCTLRequest
-	2,  // 14: proto.AgentCTLService.STARTWorker:output_type -> proto.AgentCTLResponse
-	2,  // 15: proto.AgentCTLService.STOPWorker:output_type -> proto.AgentCTLResponse
-	2,  // 16: proto.AgentCTLService.UPDATEWorker:output_type -> proto.AgentCTLResponse
-	2,  // 17: proto.AgentCTLService.REFESHMasterConnect:output_type -> proto.AgentCTLResponse
-	2,  // 18: proto.AgentCTLService.ENABLEMasterConnect:output_type -> proto.AgentCTLResponse
-	2,  // 19: proto.AgentCTLService.DISABLEMasterConnect:output_type -> proto.AgentCTLResponse
-	2,  // 20: proto.AgentCTLService.UpdateMonitorStatus:output_type -> proto.AgentCTLResponse
-	2,  // 21: proto.AgentCTLService.UpdateMonitorSignal:output_type -> proto.AgentCTLResponse
-	2,  // 22: proto.AgentCTLService.UpdateMonitorVideo:output_type -> proto.AgentCTLResponse
-	2,  // 23: proto.AgentCTLService.UpdateMonitorAudio:output_type -> proto.AgentCTLResponse
-	2,  // 24: proto.AgentCTLService.UpdateMonitorRunthread:output_type -> proto.AgentCTLResponse
-	14, // [14:25] is the sub-list for method output_type
-	3,  // [3:14] is the sub-list for method input_type
-	3,  // [3:3] is the sub-list for extension type_name
-	3,  // [3:3] is the sub-list for extension extendee
-	0,  // [0:3] is the sub-list for field type_name
+	3, // 0: proto.AgentCTLRequest.tunnel_data:type_name -> google.protobuf.Any
+	0, // 1: proto.AgentCTLResponse.status:type_name -> proto.AgentCTLResponseStatus
+	1, // 2: proto.AgentCTLResponse.agentctls:type_name -> proto.AgentCTLRequest
+	1, // 3: proto.AgentCTLService.ControlAgent:input_type -> proto.AgentCTLRequest
+	2, // 4: proto.AgentCTLService.ControlAgent:output_type -> proto.AgentCTLResponse
+	4, // [4:5] is the sub-list for method output_type
+	3, // [3:4] is the sub-list for method input_type
+	3, // [3:3] is the sub-list for extension type_name
+	3, // [3:3] is the sub-list for extension extendee
+	0, // [0:3] is the sub-list for field type_name
 }
 
 func init() { file_agentctl_proto_init() }
@@ -433,38 +367,8 @@ const _ = grpc.SupportPackageIsVersion6
 // For semantics around ctx use and closing/ending streaming RPCs, please refer to https://godoc.org/google.golang.org/grpc#ClientConn.NewStream.
 type AgentCTLServiceClient interface {
 	//*
-	// Used to start an Agent
-	STARTWorker(ctx context.Context, in *AgentCTLRequest, opts ...grpc.CallOption) (*AgentCTLResponse, error)
-	//*
-	// Used to stop an Agent
-	STOPWorker(ctx context.Context, in *AgentCTLRequest, opts ...grpc.CallOption) (*AgentCTLResponse, error)
-	//*
-	// Used to stop an Agent
-	UPDATEWorker(ctx context.Context, in *AgentCTLRequest, opts ...grpc.CallOption) (*AgentCTLResponse, error)
-	//*
-	// Used to restart an Agent
-	REFESHMasterConnect(ctx context.Context, in *AgentCTLRequest, opts ...grpc.CallOption) (*AgentCTLResponse, error)
-	//*
-	// Used to enable connect to an Agent,allow agent connect to agent's backend
-	ENABLEMasterConnect(ctx context.Context, in *AgentCTLRequest, opts ...grpc.CallOption) (*AgentCTLResponse, error)
-	//*
-	// Used to disable connect to an Agent, reject agent connect to agent's backend
-	DISABLEMasterConnect(ctx context.Context, in *AgentCTLRequest, opts ...grpc.CallOption) (*AgentCTLResponse, error)
-	//*
-	// Used to enable connect to an Agent,allow agent connect to agent's backend
-	UpdateMonitorStatus(ctx context.Context, in *AgentCTLRequest, opts ...grpc.CallOption) (*AgentCTLResponse, error)
-	//*
-	// update monitor signal
-	UpdateMonitorSignal(ctx context.Context, in *AgentCTLRequest, opts ...grpc.CallOption) (*AgentCTLResponse, error)
-	//*
-	// Update monitor video
-	UpdateMonitorVideo(ctx context.Context, in *AgentCTLRequest, opts ...grpc.CallOption) (*AgentCTLResponse, error)
-	//*
-	// Update monitor audio
-	UpdateMonitorAudio(ctx context.Context, in *AgentCTLRequest, opts ...grpc.CallOption) (*AgentCTLResponse, error)
-	//*
-	// Update run thread
-	UpdateMonitorRunthread(ctx context.Context, in *AgentCTLRequest, opts ...grpc.CallOption) (*AgentCTLResponse, error)
+	// Used to control an Agent
+	ControlAgent(ctx context.Context, in *AgentCTLRequest, opts ...grpc.CallOption) (*AgentCTLResponse, error)
 }
 
 type agentCTLServiceClient struct {
@@ -475,99 +379,9 @@ func NewAgentCTLServiceClient(cc grpc.ClientConnInterface) AgentCTLServiceClient
 	return &agentCTLServiceClient{cc}
 }
 
-func (c *agentCTLServiceClient) STARTWorker(ctx context.Context, in *AgentCTLRequest, opts ...grpc.CallOption) (*AgentCTLResponse, error) {
+func (c *agentCTLServiceClient) ControlAgent(ctx context.Context, in *AgentCTLRequest, opts ...grpc.CallOption) (*AgentCTLResponse, error) {
 	out := new(AgentCTLResponse)
-	err := c.cc.Invoke(ctx, "/proto.AgentCTLService/STARTWorker", in, out, opts...)
-	if err != nil {
-		return nil, err
-	}
-	return out, nil
-}
-
-func (c *agentCTLServiceClient) STOPWorker(ctx context.Context, in *AgentCTLRequest, opts ...grpc.CallOption) (*AgentCTLResponse, error) {
-	out := new(AgentCTLResponse)
-	err := c.cc.Invoke(ctx, "/proto.AgentCTLService/STOPWorker", in, out, opts...)
-	if err != nil {
-		return nil, err
-	}
-	return out, nil
-}
-
-func (c *agentCTLServiceClient) UPDATEWorker(ctx context.Context, in *AgentCTLRequest, opts ...grpc.CallOption) (*AgentCTLResponse, error) {
-	out := new(AgentCTLResponse)
-	err := c.cc.Invoke(ctx, "/proto.AgentCTLService/UPDATEWorker", in, out, opts...)
-	if err != nil {
-		return nil, err
-	}
-	return out, nil
-}
-
-func (c *agentCTLServiceClient) REFESHMasterConnect(ctx context.Context, in *AgentCTLRequest, opts ...grpc.CallOption) (*AgentCTLResponse, error) {
-	out := new(AgentCTLResponse)
-	err := c.cc.Invoke(ctx, "/proto.AgentCTLService/REFESHMasterConnect", in, out, opts...)
-	if err != nil {
-		return nil, err
-	}
-	return out, nil
-}
-
-func (c *agentCTLServiceClient) ENABLEMasterConnect(ctx context.Context, in *AgentCTLRequest, opts ...grpc.CallOption) (*AgentCTLResponse, error) {
-	out := new(AgentCTLResponse)
-	err := c.cc.Invoke(ctx, "/proto.AgentCTLService/ENABLEMasterConnect", in, out, opts...)
-	if err != nil {
-		return nil, err
-	}
-	return out, nil
-}
-
-func (c *agentCTLServiceClient) DISABLEMasterConnect(ctx context.Context, in *AgentCTLRequest, opts ...grpc.CallOption) (*AgentCTLResponse, error) {
-	out := new(AgentCTLResponse)
-	err := c.cc.Invoke(ctx, "/proto.AgentCTLService/DISABLEMasterConnect", in, out, opts...)
-	if err != nil {
-		return nil, err
-	}
-	return out, nil
-}
-
-func (c *agentCTLServiceClient) UpdateMonitorStatus(ctx context.Context, in *AgentCTLRequest, opts ...grpc.CallOption) (*AgentCTLResponse, error) {
-	out := new(AgentCTLResponse)
-	err := c.cc.Invoke(ctx, "/proto.AgentCTLService/UpdateMonitorStatus", in, out, opts...)
-	if err != nil {
-		return nil, err
-	}
-	return out, nil
-}
-
-func (c *agentCTLServiceClient) UpdateMonitorSignal(ctx context.Context, in *AgentCTLRequest, opts ...grpc.CallOption) (*AgentCTLResponse, error) {
-	out := new(AgentCTLResponse)
-	err := c.cc.Invoke(ctx, "/proto.AgentCTLService/UpdateMonitorSignal", in, out, opts...)
-	if err != nil {
-		return nil, err
-	}
-	return out, nil
-}
-
-func (c *agentCTLServiceClient) UpdateMonitorVideo(ctx context.Context, in *AgentCTLRequest, opts ...grpc.CallOption) (*AgentCTLResponse, error) {
-	out := new(AgentCTLResponse)
-	err := c.cc.Invoke(ctx, "/proto.AgentCTLService/UpdateMonitorVideo", in, out, opts...)
-	if err != nil {
-		return nil, err
-	}
-	return out, nil
-}
-
-func (c *agentCTLServiceClient) UpdateMonitorAudio(ctx context.Context, in *AgentCTLRequest, opts ...grpc.CallOption) (*AgentCTLResponse, error) {
-	out := new(AgentCTLResponse)
-	err := c.cc.Invoke(ctx, "/proto.AgentCTLService/UpdateMonitorAudio", in, out, opts...)
-	if err != nil {
-		return nil, err
-	}
-	return out, nil
-}
-
-func (c *agentCTLServiceClient) UpdateMonitorRunthread(ctx context.Context, in *AgentCTLRequest, opts ...grpc.CallOption) (*AgentCTLResponse, error) {
-	out := new(AgentCTLResponse)
-	err := c.cc.Invoke(ctx, "/proto.AgentCTLService/UpdateMonitorRunthread", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/proto.AgentCTLService/ControlAgent", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -577,276 +391,36 @@ func (c *agentCTLServiceClient) UpdateMonitorRunthread(ctx context.Context, in *
 // AgentCTLServiceServer is the server API for AgentCTLService service.
 type AgentCTLServiceServer interface {
 	//*
-	// Used to start an Agent
-	STARTWorker(context.Context, *AgentCTLRequest) (*AgentCTLResponse, error)
-	//*
-	// Used to stop an Agent
-	STOPWorker(context.Context, *AgentCTLRequest) (*AgentCTLResponse, error)
-	//*
-	// Used to stop an Agent
-	UPDATEWorker(context.Context, *AgentCTLRequest) (*AgentCTLResponse, error)
-	//*
-	// Used to restart an Agent
-	REFESHMasterConnect(context.Context, *AgentCTLRequest) (*AgentCTLResponse, error)
-	//*
-	// Used to enable connect to an Agent,allow agent connect to agent's backend
-	ENABLEMasterConnect(context.Context, *AgentCTLRequest) (*AgentCTLResponse, error)
-	//*
-	// Used to disable connect to an Agent, reject agent connect to agent's backend
-	DISABLEMasterConnect(context.Context, *AgentCTLRequest) (*AgentCTLResponse, error)
-	//*
-	// Used to enable connect to an Agent,allow agent connect to agent's backend
-	UpdateMonitorStatus(context.Context, *AgentCTLRequest) (*AgentCTLResponse, error)
-	//*
-	// update monitor signal
-	UpdateMonitorSignal(context.Context, *AgentCTLRequest) (*AgentCTLResponse, error)
-	//*
-	// Update monitor video
-	UpdateMonitorVideo(context.Context, *AgentCTLRequest) (*AgentCTLResponse, error)
-	//*
-	// Update monitor audio
-	UpdateMonitorAudio(context.Context, *AgentCTLRequest) (*AgentCTLResponse, error)
-	//*
-	// Update run thread
-	UpdateMonitorRunthread(context.Context, *AgentCTLRequest) (*AgentCTLResponse, error)
+	// Used to control an Agent
+	ControlAgent(context.Context, *AgentCTLRequest) (*AgentCTLResponse, error)
 }
 
 // UnimplementedAgentCTLServiceServer can be embedded to have forward compatible implementations.
 type UnimplementedAgentCTLServiceServer struct {
 }
 
-func (*UnimplementedAgentCTLServiceServer) STARTWorker(context.Context, *AgentCTLRequest) (*AgentCTLResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method STARTWorker not implemented")
-}
-func (*UnimplementedAgentCTLServiceServer) STOPWorker(context.Context, *AgentCTLRequest) (*AgentCTLResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method STOPWorker not implemented")
-}
-func (*UnimplementedAgentCTLServiceServer) UPDATEWorker(context.Context, *AgentCTLRequest) (*AgentCTLResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method UPDATEWorker not implemented")
-}
-func (*UnimplementedAgentCTLServiceServer) REFESHMasterConnect(context.Context, *AgentCTLRequest) (*AgentCTLResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method REFESHMasterConnect not implemented")
-}
-func (*UnimplementedAgentCTLServiceServer) ENABLEMasterConnect(context.Context, *AgentCTLRequest) (*AgentCTLResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method ENABLEMasterConnect not implemented")
-}
-func (*UnimplementedAgentCTLServiceServer) DISABLEMasterConnect(context.Context, *AgentCTLRequest) (*AgentCTLResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method DISABLEMasterConnect not implemented")
-}
-func (*UnimplementedAgentCTLServiceServer) UpdateMonitorStatus(context.Context, *AgentCTLRequest) (*AgentCTLResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method UpdateMonitorStatus not implemented")
-}
-func (*UnimplementedAgentCTLServiceServer) UpdateMonitorSignal(context.Context, *AgentCTLRequest) (*AgentCTLResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method UpdateMonitorSignal not implemented")
-}
-func (*UnimplementedAgentCTLServiceServer) UpdateMonitorVideo(context.Context, *AgentCTLRequest) (*AgentCTLResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method UpdateMonitorVideo not implemented")
-}
-func (*UnimplementedAgentCTLServiceServer) UpdateMonitorAudio(context.Context, *AgentCTLRequest) (*AgentCTLResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method UpdateMonitorAudio not implemented")
-}
-func (*UnimplementedAgentCTLServiceServer) UpdateMonitorRunthread(context.Context, *AgentCTLRequest) (*AgentCTLResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method UpdateMonitorRunthread not implemented")
+func (*UnimplementedAgentCTLServiceServer) ControlAgent(context.Context, *AgentCTLRequest) (*AgentCTLResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method ControlAgent not implemented")
 }
 
 func RegisterAgentCTLServiceServer(s *grpc.Server, srv AgentCTLServiceServer) {
 	s.RegisterService(&_AgentCTLService_serviceDesc, srv)
 }
 
-func _AgentCTLService_STARTWorker_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _AgentCTLService_ControlAgent_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(AgentCTLRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(AgentCTLServiceServer).STARTWorker(ctx, in)
+		return srv.(AgentCTLServiceServer).ControlAgent(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/proto.AgentCTLService/STARTWorker",
+		FullMethod: "/proto.AgentCTLService/ControlAgent",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(AgentCTLServiceServer).STARTWorker(ctx, req.(*AgentCTLRequest))
-	}
-	return interceptor(ctx, in, info, handler)
-}
-
-func _AgentCTLService_STOPWorker_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(AgentCTLRequest)
-	if err := dec(in); err != nil {
-		return nil, err
-	}
-	if interceptor == nil {
-		return srv.(AgentCTLServiceServer).STOPWorker(ctx, in)
-	}
-	info := &grpc.UnaryServerInfo{
-		Server:     srv,
-		FullMethod: "/proto.AgentCTLService/STOPWorker",
-	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(AgentCTLServiceServer).STOPWorker(ctx, req.(*AgentCTLRequest))
-	}
-	return interceptor(ctx, in, info, handler)
-}
-
-func _AgentCTLService_UPDATEWorker_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(AgentCTLRequest)
-	if err := dec(in); err != nil {
-		return nil, err
-	}
-	if interceptor == nil {
-		return srv.(AgentCTLServiceServer).UPDATEWorker(ctx, in)
-	}
-	info := &grpc.UnaryServerInfo{
-		Server:     srv,
-		FullMethod: "/proto.AgentCTLService/UPDATEWorker",
-	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(AgentCTLServiceServer).UPDATEWorker(ctx, req.(*AgentCTLRequest))
-	}
-	return interceptor(ctx, in, info, handler)
-}
-
-func _AgentCTLService_REFESHMasterConnect_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(AgentCTLRequest)
-	if err := dec(in); err != nil {
-		return nil, err
-	}
-	if interceptor == nil {
-		return srv.(AgentCTLServiceServer).REFESHMasterConnect(ctx, in)
-	}
-	info := &grpc.UnaryServerInfo{
-		Server:     srv,
-		FullMethod: "/proto.AgentCTLService/REFESHMasterConnect",
-	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(AgentCTLServiceServer).REFESHMasterConnect(ctx, req.(*AgentCTLRequest))
-	}
-	return interceptor(ctx, in, info, handler)
-}
-
-func _AgentCTLService_ENABLEMasterConnect_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(AgentCTLRequest)
-	if err := dec(in); err != nil {
-		return nil, err
-	}
-	if interceptor == nil {
-		return srv.(AgentCTLServiceServer).ENABLEMasterConnect(ctx, in)
-	}
-	info := &grpc.UnaryServerInfo{
-		Server:     srv,
-		FullMethod: "/proto.AgentCTLService/ENABLEMasterConnect",
-	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(AgentCTLServiceServer).ENABLEMasterConnect(ctx, req.(*AgentCTLRequest))
-	}
-	return interceptor(ctx, in, info, handler)
-}
-
-func _AgentCTLService_DISABLEMasterConnect_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(AgentCTLRequest)
-	if err := dec(in); err != nil {
-		return nil, err
-	}
-	if interceptor == nil {
-		return srv.(AgentCTLServiceServer).DISABLEMasterConnect(ctx, in)
-	}
-	info := &grpc.UnaryServerInfo{
-		Server:     srv,
-		FullMethod: "/proto.AgentCTLService/DISABLEMasterConnect",
-	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(AgentCTLServiceServer).DISABLEMasterConnect(ctx, req.(*AgentCTLRequest))
-	}
-	return interceptor(ctx, in, info, handler)
-}
-
-func _AgentCTLService_UpdateMonitorStatus_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(AgentCTLRequest)
-	if err := dec(in); err != nil {
-		return nil, err
-	}
-	if interceptor == nil {
-		return srv.(AgentCTLServiceServer).UpdateMonitorStatus(ctx, in)
-	}
-	info := &grpc.UnaryServerInfo{
-		Server:     srv,
-		FullMethod: "/proto.AgentCTLService/UpdateMonitorStatus",
-	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(AgentCTLServiceServer).UpdateMonitorStatus(ctx, req.(*AgentCTLRequest))
-	}
-	return interceptor(ctx, in, info, handler)
-}
-
-func _AgentCTLService_UpdateMonitorSignal_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(AgentCTLRequest)
-	if err := dec(in); err != nil {
-		return nil, err
-	}
-	if interceptor == nil {
-		return srv.(AgentCTLServiceServer).UpdateMonitorSignal(ctx, in)
-	}
-	info := &grpc.UnaryServerInfo{
-		Server:     srv,
-		FullMethod: "/proto.AgentCTLService/UpdateMonitorSignal",
-	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(AgentCTLServiceServer).UpdateMonitorSignal(ctx, req.(*AgentCTLRequest))
-	}
-	return interceptor(ctx, in, info, handler)
-}
-
-func _AgentCTLService_UpdateMonitorVideo_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(AgentCTLRequest)
-	if err := dec(in); err != nil {
-		return nil, err
-	}
-	if interceptor == nil {
-		return srv.(AgentCTLServiceServer).UpdateMonitorVideo(ctx, in)
-	}
-	info := &grpc.UnaryServerInfo{
-		Server:     srv,
-		FullMethod: "/proto.AgentCTLService/UpdateMonitorVideo",
-	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(AgentCTLServiceServer).UpdateMonitorVideo(ctx, req.(*AgentCTLRequest))
-	}
-	return interceptor(ctx, in, info, handler)
-}
-
-func _AgentCTLService_UpdateMonitorAudio_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(AgentCTLRequest)
-	if err := dec(in); err != nil {
-		return nil, err
-	}
-	if interceptor == nil {
-		return srv.(AgentCTLServiceServer).UpdateMonitorAudio(ctx, in)
-	}
-	info := &grpc.UnaryServerInfo{
-		Server:     srv,
-		FullMethod: "/proto.AgentCTLService/UpdateMonitorAudio",
-	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(AgentCTLServiceServer).UpdateMonitorAudio(ctx, req.(*AgentCTLRequest))
-	}
-	return interceptor(ctx, in, info, handler)
-}
-
-func _AgentCTLService_UpdateMonitorRunthread_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(AgentCTLRequest)
-	if err := dec(in); err != nil {
-		return nil, err
-	}
-	if interceptor == nil {
-		return srv.(AgentCTLServiceServer).UpdateMonitorRunthread(ctx, in)
-	}
-	info := &grpc.UnaryServerInfo{
-		Server:     srv,
-		FullMethod: "/proto.AgentCTLService/UpdateMonitorRunthread",
-	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(AgentCTLServiceServer).UpdateMonitorRunthread(ctx, req.(*AgentCTLRequest))
+		return srv.(AgentCTLServiceServer).ControlAgent(ctx, req.(*AgentCTLRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
@@ -856,48 +430,8 @@ var _AgentCTLService_serviceDesc = grpc.ServiceDesc{
 	HandlerType: (*AgentCTLServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
-			MethodName: "STARTWorker",
-			Handler:    _AgentCTLService_STARTWorker_Handler,
-		},
-		{
-			MethodName: "STOPWorker",
-			Handler:    _AgentCTLService_STOPWorker_Handler,
-		},
-		{
-			MethodName: "UPDATEWorker",
-			Handler:    _AgentCTLService_UPDATEWorker_Handler,
-		},
-		{
-			MethodName: "REFESHMasterConnect",
-			Handler:    _AgentCTLService_REFESHMasterConnect_Handler,
-		},
-		{
-			MethodName: "ENABLEMasterConnect",
-			Handler:    _AgentCTLService_ENABLEMasterConnect_Handler,
-		},
-		{
-			MethodName: "DISABLEMasterConnect",
-			Handler:    _AgentCTLService_DISABLEMasterConnect_Handler,
-		},
-		{
-			MethodName: "UpdateMonitorStatus",
-			Handler:    _AgentCTLService_UpdateMonitorStatus_Handler,
-		},
-		{
-			MethodName: "UpdateMonitorSignal",
-			Handler:    _AgentCTLService_UpdateMonitorSignal_Handler,
-		},
-		{
-			MethodName: "UpdateMonitorVideo",
-			Handler:    _AgentCTLService_UpdateMonitorVideo_Handler,
-		},
-		{
-			MethodName: "UpdateMonitorAudio",
-			Handler:    _AgentCTLService_UpdateMonitorAudio_Handler,
-		},
-		{
-			MethodName: "UpdateMonitorRunthread",
-			Handler:    _AgentCTLService_UpdateMonitorRunthread_Handler,
+			MethodName: "ControlAgent",
+			Handler:    _AgentCTLService_ControlAgent_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
