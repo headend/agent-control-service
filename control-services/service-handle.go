@@ -4,7 +4,6 @@ import (
 	"context"
 	agentctlpb "github.com/headend/agent-control-service/proto"
 	msgQueueServer "github.com/headend/share-module/MQ"
-	"github.com/headend/share-module/configuration/static-config"
 	"github.com/headend/share-module/model"
 	"time"
 )
@@ -18,7 +17,7 @@ func (c *agentCtlServer) ControlAgent(ctx context.Context, in *agentctlpb.AgentC
 	// Check agent exists
 	// Assign signal number
 	// Send signal
-	ctlResponseData, err2 := SendControlSignal(c, in, static_config.StartWorker, true)
+	ctlResponseData, err2 := SendControlSignal(c, in, true)
 	if err2 != nil {
 		return nil, err2
 	}
@@ -113,8 +112,8 @@ func (c *agentCtlServer) ControlAgent(ctx context.Context, in *agentctlpb.AgentC
 //}
 
 
-func SendControlSignal(c *agentCtlServer, in *agentctlpb.AgentCTLRequest, controlId int, isActive bool) (agentctlpb.AgentCTLResponse, error) {
-	err2 := SendMsgToQueue(c, in, controlId, isActive)
+func SendControlSignal(c *agentCtlServer, in *agentctlpb.AgentCTLRequest, isActive bool) (agentctlpb.AgentCTLResponse, error) {
+	err2 := SendMsgToQueue(c, in, isActive)
 	if err2 != nil {
 		return agentctlpb.AgentCTLResponse{Status: agentctlpb.AgentCTLResponseStatus_FAIL}, err2
 	}
@@ -128,14 +127,14 @@ func SendControlSignal(c *agentCtlServer, in *agentctlpb.AgentCTLRequest, contro
 	return ctlResponseData, nil
 }
 
-func SendMsgToQueue(c *agentCtlServer, in *agentctlpb.AgentCTLRequest, controlId int, isActive bool) (err error) {
+func SendMsgToQueue(c *agentCtlServer, in *agentctlpb.AgentCTLRequest, isActive bool) (err error) {
 	messageData := model.AgentCTLQueueRequest{
 		AgentCtlRequest: model.AgentCtlRequest{
 			AgentId: in.AgentId,
 			ControlId: int(in.ControlId),
 
 		},
-		ControlType: controlId,
+		ControlType: int(in.ControlType),
 		EventTime:   time.Now().Unix(),
 	}
 	msgSendToQueue, err := messageData.GetJsonString()
